@@ -50,8 +50,8 @@ Sistema web completo para la gestión de inventarios desarrollado con Laravel. P
 
 1. **Clonar el repositorio**
 ```bash
-git clone https://github.com/tu-usuario/sistema-inventario.git
-cd sistema-inventario
+git clone https://github.com/NikoCartin/InventarioRapidoLaravel.git
+cd InventarioRapidoLaravel
 ```
 
 2. **Instalar dependencias**
@@ -120,6 +120,5 @@ Este proyecto está bajo la Licencia MIT.
 
 ## Contacto
 
-- **Desarrollador**: [Tu Nombre]
-- **Email**: [tu-email@ejemplo.com]
-- **GitHub**: [@tu-usuario](https://github.com/tu-usuario)
+- **Desarrollador**: Niko Cartin
+- **GitHub**: [@NikoCartin](https://github.com/NikoCartin)
