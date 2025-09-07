@@ -1,7 +1,7 @@
 
 # Sistema de Inventario Laravel
 
-![Portada del Sistema de Inventario](public/PortadaInventario)
+![Portada del Sistema de Inventario](public/PortadaInventario.PNG)
 
 Sistema web completo para la gestión de inventarios desarrollado con Laravel. Permite administrar productos, proveedores y categorías de manera eficiente y profesional.
 
