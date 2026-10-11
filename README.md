@@ -1,127 +1,140 @@
+# Laravel Inventory Management System
 
-# Sistema de Inventario Laravel
+![Inventory Management System cover](public/PortadaInventario.PNG)
 
-![Portada del Sistema de Inventario](public/PortadaInventario.PNG)
+A complete web-based inventory management system built with Laravel. It provides efficient management of products, suppliers, and categories through a responsive MVC application.
 
-Sistema web completo para la gestión de inventarios desarrollado con Laravel. Permite administrar productos, proveedores y categorías de manera eficiente y profesional.
+## Key Features
 
-## Características Principales
+- **Complete product management:** Full CRUD operations for names, descriptions, purchase and sale prices, stock, and categorization
+- **Supplier management:** Create and manage supplier records
+- **Product categorization:** Organize products into categories for better inventory control
+- **Responsive interface:** Adaptable layout for mobile and desktop devices
+- **MVC architecture:** Implementation following Laravel development practices
 
-- **Gestión Completa de Productos**: CRUD completo con campos de nombre, descripción, precios de compra y venta, stock y categorización
-- **Administración de Proveedores**: Sistema completo para gestionar información de proveedores
-- **Categorización de Productos**: Organización por categorías para mejor control del inventario
-- **Interfaz Responsive**: Diseño adaptable para dispositivos móviles y desktop
-- **Arquitectura MVC**: Implementación siguiendo las mejores prácticas de Laravel
+## Technologies
 
-## Tecnologías Utilizadas
+- **Backend:** PHP 8.0+, Laravel 9.x
+- **Database:** MySQL/SQLite
+- **Frontend:** Blade Templates, HTML5, CSS3
+- **Architecture:** MVC (Model-View-Controller)
+- **ORM:** Eloquent
+- **Database tooling:** Migrations and seeders
 
-- **Backend**: PHP 8.0+, Laravel 9.x
-- **Base de Datos**: MySQL/SQLite
-- **Frontend**: Blade Templates, HTML5, CSS3
-- **Arquitectura**: MVC (Model-View-Controller)
-- **ORM**: Eloquent
-- **Migrations & Seeders**: Para gestión de base de datos
+## Project Structure
 
-## Estructura del Proyecto
+### Controllers
 
-### Controladores
-- `ProductoController`: Gestión completa de productos
-- `ProveedorController`: Administración de proveedores
+- `ProductoController`: Product management operations
+- `ProveedorController`: Supplier management operations
 
-### Modelos
-- `Producto`: Modelo para productos con relaciones a categorías y proveedores
-- `Proveedor`: Modelo para proveedores
-- `Categoria`: Modelo para categorización de productos
+### Models
 
-### Rutas Principales
-- `/productos` - Listado de productos
-- `/productos/create` - Crear nuevo producto
-- `/productos/{id}/edit` - Editar producto
-- `/proveedores` - Listado de proveedores
-- `/proveedores/create` - Crear nuevo proveedor
-- `/proveedores/{id}/edit` - Editar proveedor
+- `Producto`: Product model with category and supplier relationships
+- `Proveedor`: Supplier model
+- `Categoria`: Product category model
 
-## Instalación
+### Main Routes
 
-### Requisitos Previos
-- PHP 8.0 o superior
+- `/productos` - Product listing
+- `/productos/create` - Create a product
+- `/productos/{id}/edit` - Edit a product
+- `/proveedores` - Supplier listing
+- `/proveedores/create` - Create a supplier
+- `/proveedores/{id}/edit` - Edit a supplier
+
+## Installation
+
+### Prerequisites
+
+- PHP 8.0 or newer
 - Composer
-- MySQL o SQLite
-- Servidor web (Apache/Nginx)
+- MySQL or SQLite
+- Web server such as Apache or Nginx
 
-### Pasos de Instalación
+### Steps
 
-1. **Clonar el repositorio**
-```bash
-git clone https://github.com/NikoCartin/InventarioRapidoLaravel.git
-cd InventarioRapidoLaravel
-```
+1. **Clone the repository**
 
-2. **Instalar dependencias**
-```bash
-composer install
-```
+   ```bash
+   git clone https://github.com/NikoCartin/InventarioRapidoLaravel.git
+   cd InventarioRapidoLaravel
+   ```
 
-3. **Configurar el entorno**
-```bash
-cp .env.example .env
-php artisan key:generate
-```
+2. **Install dependencies**
 
-4. **Configurar base de datos**
-```bash
-# Editar .env con tus credenciales de base de datos
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=inventario
-DB_USERNAME=tu_usuario
-DB_PASSWORD=tu_password
-```
+   ```bash
+   composer install
+   ```
 
-5. **Ejecutar migraciones**
-```bash
-php artisan migrate
-```
+3. **Configure the environment**
 
-6. **Ejecutar seeders (opcional)**
-```bash
-php artisan db:seed
-```
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-7. **Iniciar servidor de desarrollo**
-```bash
-php artisan serve
-```
+4. **Configure the database**
 
-## Uso del Sistema
+   Edit `.env` with your database credentials:
 
-### Gestión de Productos
-- **Crear**: Agregar nuevos productos con información completa
-- **Listar**: Ver todos los productos con paginación
-- **Editar**: Modificar información de productos existentes
-- **Eliminar**: Remover productos del inventario
-- **Visualizar**: Ver detalles completos de cada producto
+   ```dotenv
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=inventario
+   DB_USERNAME=your_user
+   DB_PASSWORD=your_password
+   ```
 
-### Gestión de Proveedores
-- **Crear**: Registrar nuevos proveedores
-- **Listar**: Ver listado completo de proveedores
-- **Editar**: Actualizar información de proveedores
-- **Eliminar**: Remover proveedores del sistema
+5. **Run migrations**
 
-## Contribución
+   ```bash
+   php artisan migrate
+   ```
 
-1. Fork el proyecto
-2. Crear una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit tus cambios (`git commit -am 'Agregar nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Abrir un Pull Request
+6. **Run seeders (optional)**
 
-## Licencia
+   ```bash
+   php artisan db:seed
+   ```
 
-Este proyecto está bajo la Licencia MIT.
+7. **Start the development server**
 
-## Contacto
+   ```bash
+   php artisan serve
+   ```
 
-- **Desarrollador**: Niko Cartin
-- **GitHub**: [@NikoCartin](https://github.com/NikoCartin)
+## Using the System
+
+### Product Management
+
+- **Create:** Add products with complete information
+- **List:** View products with pagination
+- **Edit:** Update existing product information
+- **Delete:** Remove products from inventory
+- **View:** Review complete product details
+
+### Supplier Management
+
+- **Create:** Register suppliers
+- **List:** View all suppliers
+- **Edit:** Update supplier information
+- **Delete:** Remove suppliers from the system
+
+## Contributing
+
+1. Fork the project.
+2. Create a feature branch: `git checkout -b feature/new-feature`.
+3. Commit your changes: `git commit -am 'Add new feature'`.
+4. Push the branch: `git push origin feature/new-feature`.
+5. Open a pull request.
+
+## License
+
+This project is released under the MIT License.
+
+## Contact
+
+- **Developer:** Nicolas Cartin Reyes
+- **GitHub:** [@NikoCartin](https://github.com/NikoCartin)
